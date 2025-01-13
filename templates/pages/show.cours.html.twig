@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail{% endblock %}
+
+{% block body %}
+ <section class="py-5 text-center container">
+<div class="row py-lg-5">
+      <div class="col-lg-10 mx-auto">
+        <img src="{{ asset('uploads/' ~ cours.image) }}" alt="{{ cours.titre }}">
+        <h1 class="fw-light">{{ cours.titre }}</h1>
+        <p>
+            {{ cours.description| raw }}
+        </p>
+      </div>
+</div>
+ </section>
+ {% endblock %}

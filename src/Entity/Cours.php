@@ -36,6 +36,12 @@ class Cours
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+        $this->updatedAt = new \DateTimeImmutable();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
